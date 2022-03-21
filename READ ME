@@ -1,0 +1,4 @@
+Yapmaya çalıştığım uygulamayı .exe ve .apk haline getirmeye çalışıyorum.
+.exe haline getirdiğim zaman sadece windows kurulumlarında çalışıyor, tüm platformlarda çalışması için ne yapmam gerek?
+.apk yapmak istediğimde ise kivy yada Tk ile bir arayüz yazmadığım için açılmıyor.
+Arayüz yapıyorum ama kodları yerleştirme kısmında zorlanıyorum.
