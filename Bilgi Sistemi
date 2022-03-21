@@ -1,0 +1,284 @@
+import time 
+
+import wikipedia
+
+wikipedia.set_lang("tr")
+
+
+
+ab = 1
+print("Akdeniz Üni. Uzay Bilimleri ve Teknolojileri Bölümü Bilgi Sistemine Hoş Geldiniz.")
+time.sleep(0.2)
+while (ab < 2):
+    isim = input('İsim: ')
+    time.sleep(0.2)
+    print("Merhaba",isim, end="!\n")
+    time.sleep(0.4)
+    yaş = int(input('Yaş: '))
+    time.sleep(0.2)
+    mail = input('Mail adresi: ')
+    time.sleep(0.5)
+    print("\n"*10)
+    print("Teşekkür ederiz")
+    print("Bilgilerinizi doğrulamak için ekrana yansıtıyoruz.")
+    print("\n",isim,yaş,mail, sep="\n")
+    onay = int(input("\n\nBilgileriniz doğru ise 1'i, yanlış ise 2'ye basınız.: "))
+    if onay == 1:
+        print("Teşekkürler",isim, end=".\n")
+        print("Yardımcı olmamızı istediğiniz konuyu seçer misiniz?")
+        break
+    else:
+        print("Lütfen bilgilerinizi güncelleyin..")
+        continue
+
+'''
+
+    Burada komut sırası şu şekilde olacaktır.
+    Belirlenicek 6 ana başlık yazdırılacak.
+    Bunları yazmak için yukarıdakileri kullanıcaz.
+        İlk olarak:
+            İlgi alanı aşşağıdakilerinden hangisi olduğu sorulacak ve bunun üzerinden ilerlenicek.
+                astrofotoğrafçılık ise 1
+                yıldızlar ise 2
+                gezegenler ise 3
+                bulutsu ve galaksi ise 4
+                astreoit ve kuyrukluyıldızlar ise 5
+                uzay araçları ise 6
+        Bunlardan birini seçmesini söylicez.
+
+'''
+time.sleep(0.8)
+print("1.Astrofotoğrafçılık.")
+time.sleep(0.3)
+print("2.Yıldızlar.")
+time.sleep(0.3)
+print("3.Gezegenler.")
+time.sleep(0.3)
+print("4.Bulutsu ve Galaksiler.")
+time.sleep(0.3)
+print("5.Asteroit ve Kuyruklu Yıldızlar.")
+time.sleep(0.3)
+print("6.Uzay Araçları.")
+time.sleep(0.6)
+
+
+ba = 6
+while (ba < 7):
+    konu = int(input("Lütfen Seçim Yapınız:"))
+     
+    if konu == 1:
+        print("Astrofotoğrafçılık ile ilgili bilgiler yükleniyor lütfen bekleyiniz.")
+        break
+    elif konu == 2:
+        print("Yıldızlar ile ilgili bilgiler yükleniyor lütfen bekleyiniz.")
+        break
+    elif konu == 3:
+        print("Gezegenler ile ilgili bilgiler yükleniyor lütfen bekleyiniz.")
+        break
+    elif konu == 4:
+        print("Bulutsu ve Galaksiler ile ilgili bilgiler yükleniyor lütfen bekleyiniz.")
+        break
+    elif konu == 5:
+        print("Asteroit ve Kuyruklu Yıldızlar ile ilgili bilgiler yükleniyor lütfen bekleyiniz.")
+        break
+    elif konu == 6:
+        print("Uzay Araçları ile ilgili bilgiler yükleniyor lütfen bekleyiniz.")
+        break
+    else:
+        print("Geçersiz işlem. Lütfen tekrar seçim yapınız.")
+        continue
+
+
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+print(".")
+time.sleep(0.5)
+
+print("Bilgiler aktarılıyor.")
+
+
+'''
+
+    Yukarıda seçilen komutlara yükleme yapılacak.
+        1. konu seçildiyse bekleme sonrası konular gelicek.
+            gelen konulardan biri seçilicek.
+            o komut z girdisi olucak.
+            z girdisi ise str(input()) komutuna eşit olucak.
+            yani gelen konulardan biri seçildiğinde z girdisi bize o konuyu göstericek.
+            z girdisi wikipedia aramasında öncü olucak ve seçilen konunun wikipediada karşılığı olan sayfayı yazdırıcak.
+
+'''
+
+
+
+''' 
+
+    alt başlıkların seçimini bir değişkene ata.
+        o değişkeni wikipediada arat ve yazdır.
+            yazdırma sonunda 1 adım geri ve/veya ana başlıklara geri dönmek için döngü hazırla.
+        
+'''
+
+
+
+if konu == 1:
+    file = open("astro.txt","r", encoding="utf-8")
+    q = file.readlines()
+        
+    for i in q:
+        print(i)
+            
+    #print(q[1])
+    file.close()
+        
+    abx = int(input("\nLütfen alt başlıklardan size en yatkın olanı tuşlayınız: "))
+    arac = {
+        
+    1: '1',
+    2: '1',
+    3: '1',
+    4: '1',
+    5: '1',
+    6: '1'
+        
+    }
+    lf = arac[abx]
+    print(wikipedia.summary(lf))
+        
+elif konu == 2:
+    file = open("yıldız.txt","r", encoding="utf-8")
+    q = file.readlines()
+       
+    for i in q:
+        print(i)
+        
+    file.close()
+        
+    abx = int(input("\nLütfen alt başlıklardan size en yatkın olanı tuşlayınız: "))
+    arac = {
+      
+    1: '1',
+    2: '1',
+    3: '1',
+    4: '1',
+    5: '1',
+    6: '1'
+     
+    }
+    lf = arac[abx]
+    print(wikipedia.summary(lf))
+        
+elif konu == 3:
+    file = open("gezegen.txt","r", encoding="utf-8")
+    q = file.readlines()
+       
+    for i in q:
+        print(i)
+            
+    file.close()
+        
+    abx = int(input("\nLütfen alt başlıklardan size en yatkın olanı tuşlayınız: "))
+    arac = {
+        
+    1: '1',
+    2: '1',
+    3: '1',
+    4: '1',
+    5: '1',
+    6: '1'
+     
+    }
+    lf = arac[abx]
+    print(wikipedia.summary(lf))
+      
+elif konu == 4:
+    file = open("bulutsu.txt","r", encoding="utf-8")
+    q = file.readlines()
+      
+    for i in q:
+        print(i)
+            
+    file.close()
+        
+    abx = int(input("\nLütfen alt başlıklardan size en yatkın olanı tuşlayınız: "))
+    arac = {
+        
+    1: '1',
+    2: '1',
+    3: '1',
+    4: '1',
+    5: '1',
+    6: '1'
+        
+    }
+    lf = arac[abx]
+    print(wikipedia.summary(lf))
+        
+elif konu == 5:
+    file = open("asteroit.txt","r", encoding="utf-8")
+    q = file.readlines()
+
+    for i in q:
+        print(i)
+            
+    file.close()
+        
+    abx = int(input("\nLütfen alt başlıklardan size en yatkın olanı tuşlayınız: "))
+    arac = {
+        
+    1: 'Asteroit',
+    2: 'Kuyruklu Yıldız',
+    3: 'Asteroit ve Kuyruklu Yıldız',
+    4: 'Aktif Asteroitler',
+    5: 'Asteroit Kuşağı',
+    6: 'Asteroit Sınıfları',
+    7: 'Hoba Asteroiti',
+    8: 'Kohoutek Kuyruklu Yıldızı',
+    9: 'Halley Kuyruklu Yıldızı',
+    10: "Dünya'yla karşılaşan asteroit",
+    11: 'Periyodik Kuyruklu Yıldızlar'
+     
+    }
+    lf = arac[abx]
+    print(wikipedia.summary(lf))
+        
+else:
+    file = open("araçlar.txt","r", encoding="utf-8")
+    q = file.readlines()
+       
+    for i in q:
+        print(i)
+            
+    file.close()
+        
+    abx = int(input("\nLütfen alt başlıklardan size en yatkın olanı tuşlayınız: "))
+    arac = {
+        
+    1: 'Uzay Aracı',
+    2: 'Uluslararası Uzay Ajansı',
+    3: 'Sputnik',
+    4: 'Mariner 2',
+    5: 'Apollo II',
+    6: 'Falcon 9'
+      
+    }
+    lf = arac[abx]
+    print(wikipedia.summary(lf))
+
+
+
+input("")
+
